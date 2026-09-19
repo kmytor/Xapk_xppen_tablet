@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">XP-Pen Input Mapper</string>
+    <string name="status_not_connected">Estado: Desconectado</string>
+    <string name="status_connecting">Estado: Conectando...</string>
+    <string name="status_connected">Estado: Conectado</string>
+    <string name="usb_scan">Escanear Dispositivos USB</string>
+    <string name="bluetooth_scan">Escanear Dispositivos Bluetooth</string>
+    <string name="settings">Ajustes</string>
+    <string name="permission_explanation">Esta aplicación requiere permisos especiales para inyectar eventos de entrada. Por favor, concede el permiso INJECT_EVENTS mediante ADB o activa el Servicio de Accesibilidad.</string>
+    <string name="accessibility_service_description">Servicio para asistir en la inyección de entrada para tabletas XP-Pen</string>
+
+    <!-- String arrays for Settings (Spanish) -->
+    <string-array name="button_actions">
+        <item>Ninguno</item>
+        <item>Click Izquierdo</item>
+        <item>Click Derecho</item>
+        <item>Click Medio</item>
+        <item>Borrador (Eraser)</item>
+        <item>Deshacer (Ctrl+Z)</item>
+        <item>Rehacer (Ctrl+Y)</item>
+        <item>Acercar Zoom</item>
+        <item>Alejar Zoom</item>
+        <item>Desplazar / Pan</item>
+        <item>Tamaño Pincel +</item>
+        <item>Tamaño Pincel -</item>
+    </string-array>
+
+    <string-array name="pressure_curves">
+        <item>Lineal</item>
+        <item>Suave (toque ligero)</item>
+        <item>Firme (presión fuerte)</item>
+        <item>Personalizado</item>
+    </string-array>
+
+    <string-array name="input_modes">
+        <item>Lápiz (Absoluto)</item>
+        <item>Ratón (Relativo)</item>
+    </string-array>
+
+    <string-array name="area_modes">
+        <item>Área Completa</item>
+        <item>Proporcional a la Pantalla</item>
+        <item>Área Personalizada</item>
+    </string-array>
+
+    <string-array name="rotation_names">
+        <item>0° (Normal)</item>
+        <item>90° (Zurdo - Rotar Izquierda)</item>
+        <item>180° (Invertido)</item>
+        <item>270° (Zurdo - Rotar Derecha)</item>
+    </string-array>
+</resources>

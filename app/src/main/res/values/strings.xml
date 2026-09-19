@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">XP-Pen Input Mapper</string>
+    <string name="status_not_connected">Status: Not connected</string>
+    <string name="status_connecting">Status: Connecting...</string>
+    <string name="status_connected">Status: Connected</string>
+    <string name="usb_scan">Scan for USB Devices</string>
+    <string name="bluetooth_scan">Scan for Bluetooth Devices</string>
+    <string name="settings">Settings</string>
+    <string name="permission_explanation">This app requires special permissions to inject input events. Please grant INJECT_EVENTS via ADB or enable the Accessibility Service.</string>
+    <string name="accessibility_service_description">Service to assist with input injection for XP-Pen tablets</string>
+
+    <!-- String arrays for Settings -->
+    <string-array name="button_actions">
+        <item>None</item>
+        <item>Left Click</item>
+        <item>Right Click</item>
+        <item>Middle Click</item>
+        <item>Eraser</item>
+        <item>Undo (Ctrl+Z)</item>
+        <item>Redo (Ctrl+Y)</item>
+        <item>Zoom In</item>
+        <item>Zoom Out</item>
+        <item>Pan / Scroll</item>
+        <item>Brush Size +</item>
+        <item>Brush Size -</item>
+    </string-array>
+
+    <string-array name="pressure_curves">
+        <item>Linear</item>
+        <item>Soft (light touch)</item>
+        <item>Firm (hard press)</item>
+        <item>Custom</item>
+    </string-array>
+
+    <string-array name="input_modes">
+        <item>Pen (Absolute)</item>
+        <item>Mouse (Relative)</item>
+    </string-array>
+
+    <string-array name="area_modes">
+        <item>Full Area</item>
+        <item>Proportional to Screen</item>
+        <item>Custom Area</item>
+    </string-array>
+
+    <string-array name="rotation_names">
+        <item>0° (Normal)</item>
+        <item>90° (Left-handed)</item>
+        <item>180° (Inverted)</item>
+        <item>270° (Right-handed)</item>
+    </string-array>
+</resources>
