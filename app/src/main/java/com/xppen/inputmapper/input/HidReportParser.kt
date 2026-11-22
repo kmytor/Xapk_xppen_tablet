@@ -17,7 +17,7 @@ class HidReportParser {
         // without touching multiple files.
         const val MAX_X = 50800
         const val MAX_Y = 30480
-        const val MAX_PRESSURE = 8191
+        const val MAX_PRESSURE = 16383
     }
 
     /**
@@ -80,9 +80,9 @@ class HidReportParser {
                 x = ((report[3].toInt() and 0xFF) shl 8) or (report[2].toInt() and 0xFF)
                 y = ((report[5].toInt() and 0xFF) shl 8) or (report[4].toInt() and 0xFF)
 
-                // Pressure (13-bit little-endian starting at byte 6)
+                // Pressure (14-bit little-endian starting at byte 6)
                 val rawPressureVal = ((report[7].toInt() and 0xFF) shl 8) or (report[6].toInt() and 0xFF)
-                pressure = rawPressureVal and 0x1FFF
+                pressure = rawPressureVal and 0x3FFF
 
                 // In-range bit lives in the status byte as bit 6 (0x40), exactly like
                 // the kernel driver. Some models also set bit 13 (0x2000) of the
@@ -126,9 +126,9 @@ class HidReportParser {
                 x = ((report[3].toInt() and 0xFF) shl 8) or (report[2].toInt() and 0xFF)
                 y = ((report[5].toInt() and 0xFF) shl 8) or (report[4].toInt() and 0xFF)
 
-                // Pressure (13-bit little-endian starting at byte 6)
+                // Pressure (14-bit little-endian starting at byte 6)
                 val rawPressureVal = ((report[7].toInt() and 0xFF) shl 8) or (report[6].toInt() and 0xFF)
-                pressure = rawPressureVal and 0x1FFF
+                pressure = rawPressureVal and 0x3FFF
 
                 // In-range for UGEE v2 is bit 5 (0x20), per the kernel template.
                 // Some units also set bit 6 (0x40) or bit 13 (0x2000) of the

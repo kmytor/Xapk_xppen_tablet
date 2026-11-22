@@ -62,7 +62,7 @@ class SettingsActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        checkDaemonStatus()
+        // Removed automatic daemon check to prevent forced network alerts
     }
 
     private fun checkDaemonStatus() {

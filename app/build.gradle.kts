@@ -27,11 +27,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
     }
 }
 
@@ -42,6 +42,7 @@ dependencies {
     
     // libadb-android - Wireless Debugging (adb pair + connect) in pure JVM
     implementation("com.github.MuntashirAkon:libadb-android:3.1.1")
+    implementation(libs.core.ktx)
 
     // Custom Conscrypt provider so libadb can do TLSv1.3/pairing without hidden-API bypass
     implementation("org.conscrypt:conscrypt-android:2.5.3")

@@ -26,3 +26,4 @@ dependencyResolutionManagement {
 rootProject.name = "app_xppen"
 
 include(":app")
+include(":app")

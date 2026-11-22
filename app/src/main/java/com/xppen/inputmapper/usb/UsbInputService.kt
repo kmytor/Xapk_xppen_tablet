@@ -112,12 +112,6 @@ class UsbInputService : Service() {
 
         // Proactively scan for any already-connected tablets
         checkForConnectedDevices()
-
-        // Bootstrap autonomous InputDaemon in background (No Shizuku needed)
-        kotlinx.coroutines.CoroutineScope(kotlinx.coroutines.Dispatchers.IO).launch {
-            val adbManager = com.xppen.inputmapper.daemon.LocalAdbManager(this@UsbInputService)
-            adbManager.startDaemonAutomatically()
-        }
     }
 
     private fun buildNotification(): android.app.Notification {
@@ -232,7 +226,8 @@ class UsbInputService : Service() {
 
     private fun isXpenDevice(device: UsbDevice): Boolean {
         // XP-Pen vendor ID is 0x28bd (or Hanvon Ugee vendor ID 10429 which is 0x28BD)
-        return device.vendorId == 0x28bd || device.vendorId == 10429
+        // Also supporting common USB Hub/Dongle IDs if they appear as proxies
+        return device.vendorId == 0x28bd || device.vendorId == 10429 || device.vendorId == 0x04d9 || device.vendorId == 0x05ac
     }
 
     private fun requestPermission(device: UsbDevice) {
